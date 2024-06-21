@@ -1,0 +1,197 @@
+
+
+/*position relative as a base for non-static elements*/
+/* #outerDiv {
+    position:relative;
+} */
+
+/*every direct child positioned absolute*/
+/* #outerDiv > div {
+    position:absolute;
+} */
+
+/* .home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.home-midground {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: calc(100vw - 2*50px);
+    height: 30%;
+    min-height: 100px;
+    transform: translate(-50%, 0);
+    background-color: rgba(13, 6, 6, 0.391);
+}
+
+.home-foreground {
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 2*25px);
+    height: 13vw;
+    font-size: 10vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: rgba(13, 6, 6, 0.391);
+}
+
+.page-container {
+    overscroll-behavior: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+}
+
+.page-section {
+    top: 50px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(13, 6, 6, 0.391);
+} */
+
+@font-face {
+    font-family: serif;
+    src: url("/GoudyBookletter1911.otf") format("opentype");
+}
+
+#html {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*position relative as a base for non-static elements*/
+#body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    /* cursor: none; */
+    /* cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIgh-laWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxM-CIgZmlsbD0ibm9uZXI+PC9zdmc='), auto; */
+    /* pointer-events: none; */
+}
+
+/*every direct child positioned absolute*/
+#body > div {
+    position: absolute;
+    width: 100%
+}
+
+#navBarItem { /* header item + flex item */
+    color: white;
+    flex: 1;
+    /* margin: 5px; */
+    padding: 10px;
+    text-align: center;
+    transition: 1s ease;
+
+    /* transition-duration: 2s; */
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.543);
+    box-sizing: border-box;
+
+    text-align: center;
+    /* width: auto;
+    height: auto; */
+}
+
+#navBarItem:hover {
+    color: rgb(1,50,32);
+    transition-duration: 0.7s;
+    background-color: rgba(169, 169, 169, 0.314);
+    flex: 1.5;
+}
+
+#navBar { /* header + flex container*/
+
+    width: calc(100% - 40px);
+    margin: 20px;
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    align-items: center; 
+    /* background-color: red; */
+}
+
+/* @media (max-width:600px) {
+    #navBarItem {
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+
+} */
+
+#page-container {
+    /* background-color: red; */
+    z-index: 1;
+    color: white;
+    margin-top: 75px;
+    text-align: center;
+}
+
+#page-section {
+    /* top: 50px; */
+    padding: 5px;
+    margin: 5px;
+    transition-duration: 0.3s;
+
+    /* transition-delay: -0.1s; */
+    background-color: rgba(13, 6, 6, 0.391);
+}
+
+#page-section:hover {
+    background-color: rgba(169, 169, 169, 0.339);
+}
+
+h1 {
+    color:white;
+}
+
+
+
+
+
+/*
+
+.home-foreground {
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 2*25px);
+    height: 13vw;
+    font-size: 10vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: rgba(13, 6, 6, 0.391);
+}
+
+.page-container {
+    overscroll-behavior: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+}
+
+.page-section {
+    top: 50px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(13, 6, 6, 0.391);
+} */
