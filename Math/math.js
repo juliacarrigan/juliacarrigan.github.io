@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-    background(1,100,0,5)
+    // background(1,100,0,5)
     // circle(mouseX, mouseY, 10)
     // text(navbar, mouseX, mouseY)
 }
