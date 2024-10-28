@@ -5,6 +5,8 @@ var angle;
 var newAngle;
 var settledAngle = 0;
 
+
+
 function preload() {
     img = loadImage('./image.png');
 }
@@ -21,16 +23,19 @@ function setup() {
     frameRate(60)
 
     // angle = 90
+    
 }
 
 
 function draw() {
     // background(1,50,32,40)
-    push();
-    translate(width/2,0)
-    scale(height/img.height)
-    image(img,-img.width/2,0);
-    pop();
+
+    // push();
+    // translate(width/2,0)
+    // scale(height/img.height)
+    // image(img,-img.width/2,0);
+    // pop();
+
     // let side = 30;
     // fill(255,192,203)
     // stroke(255,192,203)

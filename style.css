@@ -1,84 +1,38 @@
 
-
-/*position relative as a base for non-static elements*/
-/* #outerDiv {
-    position:relative;
-} */
-
-/*every direct child positioned absolute*/
-/* #outerDiv > div {
-    position:absolute;
-} */
-
-/* .home-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
+@font-face {
+    font-family: GaudyBookletter1911;
+    src: url("GoudyBookletter1911.otf") format("opentype");
 }
-
-.home-midground {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    width: calc(100vw - 2*50px);
-    height: 30%;
-    min-height: 100px;
-    transform: translate(-50%, 0);
-    background-color: rgba(13, 6, 6, 0.391);
-}
-
-.home-foreground {
-    display: flex;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: calc(100% - 2*25px);
-    height: 13vw;
-    font-size: 10vw;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    background-color: rgba(13, 6, 6, 0.391);
-}
-
-.page-container {
-    overscroll-behavior: auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    flex-direction: column;
-}
-
-.page-section {
-    top: 50px;
-    padding: 5px;
-    margin: 5px;
-    background-color: rgba(13, 6, 6, 0.391);
-} */
 
 @font-face {
-    font-family: serif;
-    src: url("/GoudyBookletter1911.otf") format("opentype");
+    font-family: Amperzand;
+    src: url("Amperzand.ttf") format("opentype");
 }
 
-#html {
+
+html {
     margin: 0px;
     padding: 0px;
+    font-family: GaudyBookletter1911;
 }
 
 
 /*position relative as a base for non-static elements*/
 #body {
+    /* display: flex; */
+    justify-content: right;
+
     margin: 0px;
     padding: 0px;
     position: relative;
+    /* align-items: center; */
+    width: 100%;
+
     /* cursor: none; */
     /* cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIgh-laWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxM-CIgZmlsbD0ibm9uZXI+PC9zdmc='), auto; */
     /* pointer-events: none; */
+
+    background-color: #04302E;
 }
 
 /*every direct child positioned absolute*/
@@ -102,6 +56,7 @@
     box-sizing: border-box;
 
     text-align: center;
+    font-size: 200%
     /* width: auto;
     height: auto; */
 }
@@ -110,7 +65,7 @@
     color: rgb(1,50,32);
     transition-duration: 0.7s;
     background-color: rgba(169, 169, 169, 0.314);
-    flex: 1.5;
+    /* flex: 1.5; */
 }
 
 #navBar { /* header + flex container*/
@@ -136,62 +91,57 @@
 #page-container {
     /* background-color: red; */
     z-index: 1;
-    color: white;
+    /* color: white; */
     margin-top: 75px;
+    width: 80%;
     text-align: center;
+    /* background-color:aqua */
 }
 
 #page-section {
     /* top: 50px; */
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     transition-duration: 0.3s;
+    align-items: left;
 
     /* transition-delay: -0.1s; */
-    background-color: rgba(13, 6, 6, 0.391);
+    /* background-color: rgba(13, 6, 6, 0.391); */
 }
 
 #page-section:hover {
-    background-color: rgba(169, 169, 169, 0.339);
+    /* background-color: rgba(169, 169, 169, 0.339); */
 }
 
-h1 {
-    color:white;
+.pdf {
+    width: 100%;
 }
 
 
 
-
-
-/*
-
-.home-foreground {
+.flex-container {
     display: flex;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: calc(100% - 2*25px);
-    height: 13vw;
-    font-size: 10vw;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    background-color: rgba(13, 6, 6, 0.391);
+    flex-direction: row;
 }
 
-.page-container {
-    overscroll-behavior: auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    flex-direction: column;
+.flex-item {
+    flex: 1;
 }
 
-.page-section {
-    top: 50px;
-    padding: 5px;
-    margin: 5px;
-    background-color: rgba(13, 6, 6, 0.391);
-} */
+p, h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.marquee {
+    color: black;
+    font-weight: bold;
+    white-space: nowrap;
+    clear: both;
+    float: left;
+}
+
+.marquee > p {
+    text-align: left;
+    margin-top: 10px;
+
+}

@@ -1,3 +1,5 @@
+
+
 function returnHello() {
     return("Hello")
 }
@@ -51,7 +53,13 @@ function displayHTML() {
     div.position(0,0)
 }
 
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
+
+    
     let delayedLink = document.getElementById('navBarItem');
     let delayTime = 3000;
 
@@ -69,3 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
 })
+
