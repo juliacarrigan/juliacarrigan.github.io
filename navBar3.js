@@ -1,4 +1,4 @@
 function setup() {
-    let div = navBar0()
+    let div = navBar2()
     div.position(0,0)
 }
