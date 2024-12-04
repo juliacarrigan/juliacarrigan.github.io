@@ -13,7 +13,6 @@
 </head>
 
 <script src="components.js"></script>
-<script src="main.js"></script>
 <body class="page-body">
   <div class="page-container">
     <div class="page-section" style="overflow: hidden; background: rgba(255, 255, 0, 0); position: absolute;">
@@ -59,12 +58,44 @@
             <p>Heads whip up. Torsos twist to look.</p>
         </div>
     </div>
-    <div style="height: 100%">
+    <div>
         <h1><img src="julia-signature.png" style="width: 100%"></h1>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <a href="Media/"><img src="image.png" style="max-width: 100%"></a>
+            <div class="slidesText"> Media</div>
+        </div>
+
+        <div class="mySlides fade">
+            <a href="Me/"><img src="image.png" style="max-width: 100%"></a>
+            <div class="slidesText"> Me</div>
+        </div>
+
+        <div class="mySlides fade">
+            <a href="Math"><img src="image.png" style="max-width: 100%"></a>
+            <div class="slidesText"> Math</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
     </div>
 </div>
 </body>
+
+<script src="main.js"></script>
+
 <script>
+    
     const marquee = document.getElementById("backgroundMarquee");
 
     function Vanimate(element) {
@@ -82,22 +113,22 @@
     }
     Vanimate(marquee);
 
-    const marquees = document.getElementById("scrollingMarquee");
+    // const marquees = document.getElementById("scrollingMarquee");
 
-    function Hanimate(element) {
-        let elementWidth = element.offsetWidth;
-        let parentWidth = element.parentElement.offsetWidth;
-        let flag = 0;
+    // function Hanimate(element) {
+    //     let elementWidth = element.offsetWidth;
+    //     let parentWidth = element.parentElement.offsetWidth;
+    //     let flag = 0;
 
-        setInterval(() => {
-            element.style.marginLeft = --flag + "px";
+    //     setInterval(() => {
+    //         element.style.marginLeft = --flag + "px";
 
-            if (elementWidth == -flag) {
-                flag = parentWidth;
-            }
-        }, 10);
-    }
-    Hanimate(scrollingMarquee);
+    //         if (elementWidth == -flag) {
+    //             flag = parentWidth;
+    //         }
+    //     }, 10);
+    // }
+    // Hanimate(scrollingMarquee);
 </script>
 
 </html>

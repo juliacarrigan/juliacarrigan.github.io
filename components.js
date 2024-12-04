@@ -7,7 +7,7 @@ function navBar0() {
 }
 
 function navBar1() {
-    let homeLink = "<a href='../' class='navBarItem'><img src='../home.png' style='height: 30px'><img src='../julia-signature.png' style='height: 30px'></a>"
+    let homeLink = "<a href='../' class='navBarHome'><img src='../julia-signature.png' style='height: 50px'></a>"
     let mediaLink = "<a href='../Media' class='navBarItem'>Media</a>"
     let meLink = "<a href='../Me' class='navBarItem'>Me</a>"
     let mathLink = "<a href='../Math' class='navBarItem'>Math</a>"
@@ -15,7 +15,7 @@ function navBar1() {
 }
 
 function navBar2() {
-    let homeLink = "<a href='../../' class='navBarItem'><img src='../../home.png' style='height: 30px'><img src='../../julia-signature.png' style='height: 30px'></a>"
+    let homeLink = "<a href='../../' class='navBarHome'><img src='../../julia-signature.png' style='height: 50px'></a>"
     let mediaLink = "<a href='../../Media' class='navBarItem'>Media</a>"
     let meLink = "<a href='../../Me' class='navBarItem'>Me</a>"
     let mathLink = "<a href='../../Math' class='navBarItem'>Math</a>"
@@ -24,7 +24,7 @@ function navBar2() {
 }
 
 function navBar3() {
-    let homeLink = "<a href='../../../' class='navBarItem'><img src='../../../home.png' style='height: 30px'><img src='../../../julia-signature.png' style='height: 30px'></a>"
+    let homeLink = "<a href='../../../' class='navBarHome'><img src='../../../julia-signature.png' style='height: 50px'></a>"
     let mediaLink = "<a href='../../../Media' class='navBarItem'>Media</a>"
     let meLink = "<a href='../../../Me' class='navBarItem'>Me</a>"
     let mathLink = "<a href='../../../Math' class='navBarItem'>Math</a>"
@@ -36,26 +36,3 @@ function windowResized() {
     resizeCanvas(windowWidth, windowHeight)
     displayHTML()
 }
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-
-    
-//     let delayedLink = document.getElementById('navBarItem');
-//     let delayTime = 3000;
-
-//     delayedLink.addEventListener('click', function(event) {
-//         event.preventDefault();
-//         let target = event.target;
-
-//         if (!target.disabled) {
-//             target.disabled = true;
-//             setTimeout(function() {
-//                 target.disabled = false;
-//             }, delayTime);
-//         } else {
-//             event.stopPropagation();
-//         }
-//     })
-// })
-

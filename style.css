@@ -21,6 +21,7 @@ html {
     margin: 0px;
     padding: 0px;
     font-family: GaudyBookletter1911;
+    overflow-x: hidden;
 }
 
 .page-body {
@@ -50,44 +51,50 @@ html {
 .navBarItem {
     color: var(--col3);
     flex: 1;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
     transition: 0.6s ease;
+    display: inline-block;
+    width: calc(80vw/3);
 
     transition-duration: 0.5s;
     text-decoration: none;
     border-radius: 3px;
     /* box-sizing: border-box; */
 
-    font-size: 200%;
-    /* width: auto;
-    height: auto; */
+    font-size: 40px;
 }
+
 
 .navBarItem:hover {
     transition-duration: 0.7s;
-    color: var(--col2)
+    /* color: var(--col2); */
+    filter: invert(70%);
+}
+
+.navBarHome {
+    transition-duration: 0.7s;
+}
+
+.navBarHome:hover {
+    filter: invert(70%);
 }
 
 .navBar {
-    
-    width: 100%;
+    width: 100vw;
     margin-top: 20px;
     display: flex;
     flex-flow: column;
-    gap: 2%;
 
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    max-width: 100%;
-    height: 10%;
+    text-align: center;
+    /* max-width: 100%; */
+    /* height: 10%; */
+    white-space: nowrap;
 }
 
 .page-container {
     z-index: 1;
-    margin-top: 110px;
+    margin-top: 150px;
     width: 80%;
     text-align: center;
 }
@@ -96,15 +103,46 @@ html {
     padding: 5px;
     margin: 10px;
     transition-duration: 0.3s;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     background-color: var(--col3);
 }
 
 .page-title {
-    margin-top: 20px; 
-    margin: 20px;
+    /* margin-top: 20px;  */
+
+    /* margin: 20px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
     background-color: var(--col2);
+    color: var(--col5);
+    font-style: italic;
+    font-size: 40px;
+
+    /* font-family: Amperzand; */
 }
+
+.page-box-box {
+    margin-top: 20px;
+}
+
+.page-box {
+    background-color: var(--col3);
+    margin: 10px;
+    padding: 10px;
+    height: 250px;
+    display: grid;
+    align-items: center;
+
+}
+
+.page-box > a {
+    text-decoration: none;
+    color: var(--col1);
+    font-size: 25px;
+}
+
+
 
 .pdf {
     width: 100%;
@@ -135,4 +173,116 @@ p, h1, h2, h3, h4 {
     text-align: left;
     margin-top: 10px;
 
+}
+
+.slideshow-container {
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    max-width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8)
+}
+
+.slidesText {
+    color: var(--col5);
+    /* background-color: #bbb; */
+    font-size: 25px;
+    /* padding: 8px 12px; */
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.numberText {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+.textTitle {
+    font-size: 24px;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.textBody {
+    font-size: 17px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+    .CW-flex {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .CCW-flex {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .page-box-box {
+        flex-direction: column;
+    }
 }
