@@ -21,11 +21,21 @@ html {
     src: url("Weiss.otf") format("opentype")
 }
 
+@font-face {
+    font-family: Aesthetic;
+    src: url("Aesthetic-Regular.otf") format("opentype")
+}
+
+@font-face {
+    font-family: Ethereal;
+    src: url("EtherealDemo-Regular.otf") format("opentype")
+}
+
 html {
     margin: 0px;
     padding: 0px;
-    font-family: Weiss;
-    overflow: hidden;
+    font-family: Ethereal;
+    /* overflow: hidden; */
 }
 
 .page-body {
@@ -59,15 +69,15 @@ html {
     flex: 1;
     transition: 0.1s ease;
     /* display: inline-block; */
-    width: calc(80vw/4);
+    /* width: calc(80vw/4); */
 
-    transition-duration: 0.5s;
-    text-decoration: none;
-    border-radius: 3px;
+    transition-duration: 0.4s;
+    text-decoration: 2px rgba(255, 0, 0, 0) underline;
+    /* border-radius: 3px; */
     /* box-sizing: border-box; */
 
     font-size: 40px;
-    margin: 20px
+    /* margin: 20px */
     
     /* justify-content: space-between; */
 }
@@ -77,6 +87,10 @@ html {
     transition-duration: 0.4s;
     /* color: var(--col2); */
     filter: invert(60%);
+
+    /* text-decoration: 2px underline; */
+    /* text-decoration-thi */
+    text-decoration: 2px underline;
 }
 
 .navBarHome {
@@ -89,21 +103,41 @@ html {
 }
 
 .navBar {
-    /* width: 100%; */
-    margin-top: 20px;
+    width: 100vw;
+    margin-top: 25px;
     display: flex;
     flex-flow: column;
-    align-items: center;
+    text-align: center;
+    z-index: 99999;
+    
+    /* justify-content: space-between; */
+    /* margin-left: 30px;
+    margin-right: 30px; */
+}
+
+.navBar > div > a {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.navBar > :nth-child(2) {
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.navBar > :nth-child(2) > .navBarItem {
+    /* border: 2px solid red; */
+    width: 100%;
     justify-content: space-between;
-    column-gap: 20px;
-    /* background-color: green; */
-    text-wrap: nowrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* column-gap: 20px; */
 }
 
 .page-container {
-    z-index: 1;
+    z-index: 0;
     margin-top: 150px;
-    width: 80%;
+    width: 100%;
     text-align: center;
     height: 100%;
 }
@@ -112,7 +146,7 @@ html {
     padding: 5px;
     margin: 10px;
     transition-duration: 0.3s;
-    background-color: var(--col3);
+    background-color: var(--col1);
 }
 
 .page-title {
@@ -122,24 +156,26 @@ html {
     text-transform: uppercase;
     font-size: 60px;
     margin-left: 5%;
+    font-family: Aesthetic;
 }
 
 .page-subtitle {
     text-align: right;
     font-size: 15px;
     margin-right: 5%;
-    margin-left: 40%
+    margin-left: 40%;
 }
 
 .page-box-box {
     display: flex;
     flex-wrap: nowrap;
     height: 100%;
+    width: 100%;
 }
 
 .page-box-box > div:nth-child(1) {
     flex-direction: column; 
-    width: 30%;
+    /* width: 30%; */
 }
 
 .page-box-box > div:nth-child(2){
@@ -167,8 +203,10 @@ html {
     text-align: left;
     margin-left: 10%;
     padding-left: 10px;
-    margin-right: 40%;
-    padding-right: 10px;
+    margin-right: 0%;
+    padding-right: 20px;
+
+    /* padding-right: 10px */
 
 }
 
@@ -177,13 +215,26 @@ html {
     color: var(--col2);
     font-size: 38px;
     transition: 1s ease;
+    text-wrap: nowrap;
+    z-index: 1;
 }
 
 .page-box > a:hover {
-    /* color: red; */
-
-    /* filter: invert(100%) */
+    /* color: var(--col5); */
     
+}
+
+.left-side {
+    width: 70%;
+    z-index: 0;
+}
+
+.right-side {
+    width: 30%;
+}
+
+.both-sides {
+    width: 100%;
 }
 
 .slide {
@@ -288,7 +339,7 @@ p, h1, h2, h3, h4 {
     /* background-color: #bbb; */
     font-size: 25px;
     /* padding: 8px 12px; */
-    position: absolute;
+    /* position: absolute; */
     bottom: 30px;
     width: 100%;
     z-index: 100;
@@ -383,6 +434,31 @@ img.resize {
 
     .page-box-box {
         flex-direction: column;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .right-side {
+        /* opacity: 0; */
+        display: none;
+    }
+
+    .navBar {
+        height: 200px;
+        text-align: center;
+    }
+
+    .page-title {
+        text-align: center;
+        margin: 0;
+        margin-top: 70px;
+    }
+
+    .page-subtitle {
+        text-align: center;
+        margin: 0;
     }
 }
 

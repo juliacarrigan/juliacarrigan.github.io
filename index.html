@@ -13,7 +13,7 @@
 </head>
 
 <script src="components.js"></script>
-<body class="page-body">
+<body class="page-body" style="z-index:0">
   <div class="page-container">
     <!-- <div class="page-section" style="overflow: hidden; background: rgba(255, 255, 0, 0); position: absolute;">
         <div class="marquee" id="backgroundMarquee" style="white-space: wrap; position: relative; color: rgba(18, 11, 11, 0.438);">   
@@ -61,7 +61,9 @@
     <!-- <div>
         <h1><img src="julia-signature.png" style="width: 100%"></h1>
     </div> -->
-    <div class="slideshow-container">
+
+
+    <!-- <div class="slideshow-container">
         <div class="mySlides fade">
             <a href="Me/"><img src="image.png" style="max-width: 100%"></a>
             <div class="slidesText"> Me </div>
@@ -94,8 +96,10 @@
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
         </div>
+    </div> -->
+        <img src="image.png" style="position: absolute; width:100vw; height:100vh; left: 0; top: -150px; z-index: 1">
+
     </div>
-</div>
 </body>
 
 <script src="main.js"></script>
@@ -118,23 +122,6 @@
         }, 42);
     }
     Vanimate(marquee);
-
-    // const marquees = document.getElementById("scrollingMarquee");
-
-    // function Hanimate(element) {
-    //     let elementWidth = element.offsetWidth;
-    //     let parentWidth = element.parentElement.offsetWidth;
-    //     let flag = 0;
-
-    //     setInterval(() => {
-    //         element.style.marginLeft = --flag + "px";
-
-    //         if (elementWidth == -flag) {
-    //             flag = parentWidth;
-    //         }
-    //     }, 10);
-    // }
-    // Hanimate(scrollingMarquee);
 </script>
 
 </html>
