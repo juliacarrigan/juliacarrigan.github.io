@@ -1,7 +1,7 @@
 html {
---col1: #04302F;
---col2: #A61717;
---col3: #DDB1B1;
+--col1: #F6FDFF; /* #04302F; */
+--col2: #052C38; /* #A61717; */
+--col3: #5FC8E9; /* #DDB1B1; */
 --col4: #A4E1E0;
 --col5: #F7FFFF;
 }
@@ -16,12 +16,16 @@ html {
     src: url("Amperzand.ttf") format("opentype");
 }
 
+@font-face {
+    font-family: Weiss;
+    src: url("Weiss.otf") format("opentype")
+}
 
 html {
     margin: 0px;
     padding: 0px;
-    font-family: GaudyBookletter1911;
-    overflow-x: hidden;
+    font-family: Weiss;
+    overflow: hidden;
 }
 
 .page-body {
@@ -33,6 +37,8 @@ html {
     position: relative;
     /* align-items: center; */
     width: 100%;
+    
+    height: calc(100vh - 154px);
 
     /* cursor: none; */
     /* cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIgh-laWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxM-CIgZmlsbD0ibm9uZXI+PC9zdmc='), auto; */
@@ -49,11 +55,11 @@ html {
 }
 
 .navBarItem {
-    color: var(--col3);
+    color: var(--col2);
     flex: 1;
-    transition: 0.6s ease;
-    display: inline-block;
-    width: calc(80vw/3);
+    transition: 0.1s ease;
+    /* display: inline-block; */
+    width: calc(80vw/4);
 
     transition-duration: 0.5s;
     text-decoration: none;
@@ -61,35 +67,37 @@ html {
     /* box-sizing: border-box; */
 
     font-size: 40px;
+    margin: 20px
+    
+    /* justify-content: space-between; */
 }
 
 
 .navBarItem:hover {
-    transition-duration: 0.7s;
+    transition-duration: 0.4s;
     /* color: var(--col2); */
-    filter: invert(70%);
+    filter: invert(60%);
 }
 
 .navBarHome {
-    transition-duration: 0.7s;
+    transition-duration: 0.4s;
+    filter: invert(100%);
 }
 
 .navBarHome:hover {
-    filter: invert(70%);
+    filter: invert(30%);
 }
 
 .navBar {
-    width: 100vw;
+    /* width: 100%; */
     margin-top: 20px;
     display: flex;
     flex-flow: column;
-
-    /* justify-content: center; */
     align-items: center;
-    text-align: center;
-    /* max-width: 100%; */
-    /* height: 10%; */
-    white-space: nowrap;
+    justify-content: space-between;
+    column-gap: 20px;
+    /* background-color: green; */
+    text-wrap: nowrap;
 }
 
 .page-container {
@@ -97,52 +105,109 @@ html {
     margin-top: 150px;
     width: 80%;
     text-align: center;
+    height: 100%;
 }
 
 .page-section {
     padding: 5px;
     margin: 10px;
     transition-duration: 0.3s;
-    /* margin-top: 20px; */
     background-color: var(--col3);
 }
 
 .page-title {
-    /* margin-top: 20px;  */
+    text-align: left;
+    color: var(--col2);
+    font-style: oblique;
+    text-transform: uppercase;
+    font-size: 60px;
+    margin-left: 5%;
+}
 
-    /* margin: 20px; */
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 5px;
-    background-color: var(--col2);
-    color: var(--col5);
-    font-style: italic;
-    font-size: 40px;
-
-    /* font-family: Amperzand; */
+.page-subtitle {
+    text-align: right;
+    font-size: 15px;
+    margin-right: 5%;
+    margin-left: 40%
 }
 
 .page-box-box {
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.page-box-box > div:nth-child(1) {
+    flex-direction: column; 
+    width: 30%;
+}
+
+.page-box-box > div:nth-child(2){
+    /* background-color: var(--col3); 
+    justify-content: center; 
+    align-items: center;  */
+    /* width: 70%; */
+    /* border: 10px solid black; */
+    /* display: grid; */
+    /* align-items: center; */
+    /* color: var(--col1); */
+    /* font-size: 25px; */
 }
 
 .page-box {
-    background-color: var(--col3);
+    background-color: var(--col1);
     margin: 10px;
-    padding: 10px;
-    height: 250px;
+    /* padding: 10px; */
+    height: 50px;
     display: grid;
     align-items: center;
+    /* flex-direction: column; */
+    /* flex: 1; */
+    transition-duration: 1s;
+    text-align: left;
+    margin-left: 10%;
+    padding-left: 10px;
+    margin-right: 40%;
+    padding-right: 10px;
 
 }
 
 .page-box > a {
     text-decoration: none;
-    color: var(--col1);
-    font-size: 25px;
+    color: var(--col2);
+    font-size: 38px;
+    transition: 1s ease;
 }
 
+.page-box > a:hover {
+    /* color: red; */
 
+    /* filter: invert(100%) */
+    
+}
+
+.slide {
+    transition: 1s ease;
+}
+
+.slide:hover {
+    filter: invert(100%);
+    animation-name: slide;
+    transition: all ease 0.6s;
+}
+
+.slide:not(:hover) {
+    /* background-color: white */
+}
+
+@keyframes slide {
+    0% {filter: invert(0%)}
+    100% {filter: invert(100%)}
+}
+
+.page-box:hover {
+    
+}
 
 .pdf {
     width: 100%;
@@ -177,27 +242,31 @@ p, h1, h2, h3, h4 {
 
 .slideshow-container {
     max-width: 80%;
-    position: relative;
+    /* position: relative; */
     margin: auto;
 }
 
 .mySlides {
-    display: none;
-    max-width: 100%;
+    display: block;
+    /* max-width: 100%; */
+    /* position: absolute; */
+    z-index: 1;
+    
 }
 
 .prev, .next {
     cursor: pointer;
-    position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
     color: white;
+    background-color: var(--col2);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     user-select: none;
+    z-index: 2;
 }
 
 .prev {
@@ -220,8 +289,9 @@ p, h1, h2, h3, h4 {
     font-size: 25px;
     /* padding: 8px 12px; */
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     width: 100%;
+    z-index: 100;
 }
 
 .numberText {
@@ -233,6 +303,8 @@ p, h1, h2, h3, h4 {
 }
 
 .dot {
+    z-index: -1000;
+    /* position: absolute; */
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -253,9 +325,13 @@ p, h1, h2, h3, h4 {
 }
 
 @keyframes fade {
-    from {opacity: 0.4}
-    to {opacity: 1}
+    /* from {opacity: 0.4}
+    to {opacity: 1} */
+    /* 0%   {width:0; height:100%}
+    100% {width: 100%; height: 100%} */
 }
+
+
 
 .textTitle {
     font-size: 24px;
@@ -269,6 +345,29 @@ p, h1, h2, h3, h4 {
     font-size: 17px;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+.textPageContainer {
+    background-color: var(--col5);
+    border-radius: 8px;
+    margin-left: 50px; 
+    margin-right: 50px;
+}
+
+.textPageTitle {
+    margin-top: 30px; 
+    text-align: center;
+    font-size: 30px;
+}
+
+.textPageParagraph {
+    margin-top: 30px; 
+    text-align: justify;
+    font-size: 20px
+}
+
+img.resize {
+    height: auto;
 }
 
 @media (max-width: 500px) {
@@ -286,3 +385,4 @@ p, h1, h2, h3, h4 {
         flex-direction: column;
     }
 }
+

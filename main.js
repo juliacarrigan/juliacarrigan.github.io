@@ -39,7 +39,8 @@ function animateSlides() {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style = "display: none";
+    // slides[i].style.opacity = 0;
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
@@ -47,6 +48,7 @@ function animateSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
+  // slides[slideIndex-1].style.display = "block";
 
   dots[slideIndex-1].className += " active";
   setTimeout(animateSlides, 5000);
